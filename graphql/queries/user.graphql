@@ -1,0 +1,5 @@
+query User($id: ID!) {
+  User(id: $id) {
+    ...UserFields
+  }
+}
