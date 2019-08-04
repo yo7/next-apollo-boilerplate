@@ -16,7 +16,7 @@ export const withApolloClient = (
 
     static displayName = 'withApollo(App)'
     static async getInitialProps(appCtx: AppContext) {
-      const { Component, router } = appCtx
+      const { AppTree } = appCtx as { AppTree: any }
 
       let appProps = {}
 
@@ -38,14 +38,7 @@ export const withApolloClient = (
           // Run all GraphQL queries
           await getMarkupFromTree({
             renderFunction: renderToString,
-            tree: (
-              <App
-                {...appProps}
-                Component={Component}
-                router={router}
-                apolloClient={apollo}
-              />
-            ),
+            tree: <AppTree {...appProps} apolloClient={apollo} />,
           })
         } catch (error) {
           // Prevent Apollo Client GraphQL errors from crashing SSR.
@@ -77,7 +70,7 @@ export const withApolloClient = (
     }
 
     render() {
-      return <App {...this.props} apolloClient={this.apolloClient} />
+      return <App apolloClient={this.apolloClient} {...this.props} />
     }
   }
 }
