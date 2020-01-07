@@ -3,7 +3,7 @@
     "@emotion/babel-preset-css-prop": "^10.0.14",
     "@emotion/core": "^10.0.14",
     "apollo-cache-inmemory": "^1.6.2",
-    "apollo-client": "^2.6.3",
+    "apollo-client": "^2.6.8",
     "apollo-link-context": "^1.0.18",
     "apollo-link-http": "^1.5.15",
     "graphql": "^14.5.8",
