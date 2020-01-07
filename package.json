@@ -14,7 +14,7 @@
     "react-dom": "16.11.0"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^1.4.0",
+    "@graphql-codegen/cli": "^1.11.0",
     "@graphql-codegen/typescript": "^1.4.0",
     "@graphql-codegen/typescript-operations": "^1.9.1",
     "@graphql-codegen/typescript-react-apollo": "^1.10.0",
